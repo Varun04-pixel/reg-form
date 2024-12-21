@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stuff !!</title>
+
+    <style>
+        /* CSS */
+        .shadow {
+            margin: 50px 250px 50px 250px;
+        }
+    </style>
+
+    <!-- css (CDN) link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- js (CDN) link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- HTML -->
+    <div class="shadow p-5 rounded bg-body-territory">
+        <form>
+            <h2 style="text-align: center;">KLS VPP Student registration form</h2>
+            <br><br>
+
+            <label for="ex-01" class="form-label">Student name :</label>
+            <input type="text" placeholder="Full name" class="form-control bg-transparent" id="ex-01">
+            <br><br>
+
+            <label for="ex-02" class="form-label">Student ID :</label>
+            <input type="password" placeholder="eg:  (457cs231177)" class="form-control bg-transparent" id="ex-02">
+            <br><br>
+
+            <label>Gender :</label> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="gen" id="ex-03"><label for="ex-03">Male</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="gen" id="ex-04"><label for="ex-04">Female</label>
+            <br><br><br>
+
+            <label for="ex-05">DOB :</label> &nbsp; &nbsp; &nbsp;
+            <input id="ex-05" type="date">
+            <br><br><br>
+
+            <label for="ex-06" class="form-label">Email ID :</label>
+            <input type="email" id="ex-06" placeholder="eg:  bane01@gmail.com" class="form-control bg-transparent">
+            <br><br>
+
+            <label for="ex-07" class="form-label">Student mobile no. :</label>
+            <input class="form-control bg-transparent" type="number" id="ex-07" placeholder="eg:  9563773737">
+            <br><br>
+
+            <label class="form-label">Branch :</label>
+            <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="dropdown">
+                <button class="btn btn-outline-dark" data-bs-toggle="dropdown">Select branch</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Computer science & Engg.</a></li>
+                    <li><a href="#" class="dropdown-item">Architecture</a></li>
+                    <li><a href="#" class="dropdown-item">Electronics & communication</a></li>
+                    <li><a href="#" class="dropdown-item">Mechanical Engineering</a></li>
+                    <li><a href="#" class="dropdown-item">Civil Engineering</a></li>
+                    <li><a href="#" class="dropdown-item">Automobile Engineering</a></li>
+                    <li><a href="#" class="dropdown-item">Mechatronics</a></li>
+                </ul>
+            </span>
+            <br><br><br>
+
+            <label class="form-label">Student's achievement :</label>
+            <br>
+            <input style="width: 450px; margin-left: 175px;" type="file" class="form-control">
+            <span style="opacity: 50%; margin-left: 180px;">any e-certificate is acceptable.</span>
+            <br><br>
+
+            <label for="ex-08" class="form-label">Address :</label>
+            <input type="text" style="height: 200px;" class="form-control bg-transparent">
+            <br><br>
+
+            <label for="ex-09" class="form-label">Skill/talent :</label>
+            <br><br>
+            <span style="display: inline-block;">
+                <input type="checkbox" id="in-1"> &nbsp; <label for="in-1">Acting</label><br>
+                <input type="checkbox" id="in-2"> &nbsp; <label for="in-2">Drawing</label><br>
+                <input type="checkbox" id="in-3"> &nbsp; <label for="in-3">Programming</label><br>
+                <input type="checkbox" id="in-4"> &nbsp; <label for="in-4">Gaming</label><br>
+                <input type="checkbox" id="in-5"> &nbsp; <label for="in-5">Dancing</label><br>
+                <input type="checkbox" id="in-6"> &nbsp; <label for="in-6">Martial arts</label><br>
+                <input type="checkbox" id="in-7"> &nbsp; <label for="in-7">Calculating</label><br>
+                <input type="checkbox" id="in-8"> &nbsp; <label for="in-8">Photography</label><br>
+            </span>
+            <span style="display: inline-block; margin-left: 90px;">
+                <input type="checkbox" id="in-9"> &nbsp; <label for="in-9">Painting</label><br>
+                <input type="checkbox" id="in-10"> &nbsp; <label for="in-10">Studing</label><br>
+                <input type="checkbox" id="in-11"> &nbsp; <label for="in-11">Reading</label><br>
+                <input type="checkbox" id="in-12"> &nbsp; <label for="in-12">Singer</label><br>
+                <input type="checkbox" id="in-13"> &nbsp; <label for="in-13">Running</label><br>
+                <input type="checkbox" id="in-14"> &nbsp; <label for="in-14">Writing</label><br>
+                <input type="checkbox" id="in-15"> &nbsp; <label for="in-15">Arts/Crafts</label><br>
+                <input type="checkbox" id="in-16"> &nbsp; <label for="in-16">Other ...</label><br>
+            </span>
+
+            <div style="text-align: center; height: 90px; margin-top: 30px;">
+                <button class="btn btn-outline-primary" onclick="myfunction01()">Submit</button>
+                <br><br>
+                <button class="btn btn-outline-dark" onclick="myfunction()">Print form</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function myfunction() {
+
+            window.print();
+
+        }
+
+        function myfunction01() {
+
+            window.alert("Your response has been reported by KLS VPP, Thank you !!")
+
+        }
+    </script>
+</body>
+</html>
